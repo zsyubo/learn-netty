@@ -1,4 +1,4 @@
-package org.xiaohu.netty.quickstart.demo2;
+package org.xiaohu.netty.quickstart.demo3.client;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -15,14 +15,13 @@ public class MyClientHandler extends SimpleChannelInboundHandler<String> {
      */
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, String s) throws Exception {
-        System.out.println("客户端：" + s);
-//        channelHandlerContext.writeAndFlush("当前时间：" + new Date());
-        // 关闭链路
-        channelHandlerContext.close();
+
+        // 关闭连接
+//        channelHandlerContext.close();
     }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        ctx.writeAndFlush("连接成功：" + new Date());
+        System.out.println("连接成功：" + new Date());
     }
 }
