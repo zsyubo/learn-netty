@@ -7,7 +7,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
 
-
+// Inbound  进来
 public class TestHttpServerHandle extends SimpleChannelInboundHandler<HttpObject> {
 
 

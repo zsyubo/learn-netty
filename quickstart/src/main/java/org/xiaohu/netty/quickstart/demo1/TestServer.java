@@ -6,6 +6,15 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
+/**
+ * netty编程步骤：
+ * 1. 创建2个EventLoopGroup
+ * 2. 创建自己的ChannelInitializer(管道初始化做需要进行的一些操作，比如编解码器)
+ * 3. 编写事件回调方法的业务逻辑。
+ *
+ * @author hyf
+ * @date 2019/10/9
+ **/
 public class TestServer {
 
     public static void main(String[] args) throws InterruptedException {
