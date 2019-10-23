@@ -9,7 +9,7 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import org.xiaohu.protobuf.MyDataInfo;
 
-public class MyIniter extends ChannelInitializer<SocketChannel> {
+public class MyInitializer extends ChannelInitializer<SocketChannel> {
 
     protected void initChannel(SocketChannel ch) throws Exception {
         ChannelPipeline channelPipeline = ch.pipeline();

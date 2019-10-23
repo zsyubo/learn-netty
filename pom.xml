@@ -11,6 +11,7 @@
     <modules>
         <module>quickstart</module>
         <module>protobuf</module>
+        <module>nio-learn</module>
     </modules>
 
     <properties>
