@@ -12,7 +12,7 @@ public class ProtobufClient {
         try {
             Bootstrap bootstrap = new Bootstrap();
             bootstrap.group(clientGroup).channel(NioSocketChannel.class)
-                    .handler(new ProtobufClientIniter());
+                    .handler(new ProtobufClientInitializer());
             Channel channel = bootstrap.connect("127.0.0.1", 8899).sync().channel();
         } catch (Exception e) {
 

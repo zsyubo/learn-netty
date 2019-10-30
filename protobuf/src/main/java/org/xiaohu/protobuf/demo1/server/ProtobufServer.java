@@ -12,7 +12,7 @@ public class ProtobufServer {
         try {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(bossGroup, worker).channel(NioServerSocketChannel.class)
-                    .childHandler(new MyIniter());
+                    .childHandler(new MyInitializer());
             ChannelFuture channelFuture = serverBootstrap.bind(8899).sync();
             channelFuture.channel().closeFuture().sync();
         } catch (Exception e) {
